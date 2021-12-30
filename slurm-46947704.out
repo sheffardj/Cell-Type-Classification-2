@@ -1,0 +1,274 @@
+Loading required package: lattice
+Loading required package: ggplot2
+Failed to query server: Input/output error
+Warning message:
+In system("timedatectl", intern = TRUE) :
+  running command 'timedatectl' had status 1
+Loading required package: Matrix
+Loaded glmnet 4.1-1
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:MASS’:
+
+    select
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘gridExtra’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+Loading required package: iterators
+Loading required package: parallel
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘reshape2’
+
+The following objects are masked from ‘package:data.table’:
+
+    dcast, melt
+
+
+Attaching package: ‘xgboost’
+
+The following object is masked from ‘package:dplyr’:
+
+    slice
+
+[1] "start p_vals loops"
+[1] "    - 1.7841 minutes"
+[1] "start sorting/selecting 897"
+[1] "Reduced Dimensions"
+[1] 4524  897
+   HLA-DQA1  HLA-DPA1     CD48      LTB  HLA-DQB1 KBTBD3 IGSF21 TSN condt ctype
+1  515.2868 1889.3851 515.2868   0.0000  515.2868      0      0   0     1     1
+2  893.9746 1430.3594 536.3848   0.0000 1251.5645      0      0   0     1     1
+3 3075.7401 2114.5713 384.4675 384.4675  576.7013      0      0   0     0     1
+4  963.5768 2119.8690 385.4307   0.0000  578.1461      0      0   0     0     1
+5  176.1184  528.3551   0.0000   0.0000  176.1184      0      0   0     0     1
+6 2953.5865 2320.6751 421.9409   0.0000 2531.6456      0      0   0     0     1
+[1] "Starting XGBoost Hyperparameter Search"
+[1] "Hyperparameter Tuning Time: 47.1256833333333 minutes"
+ [1] 1.900e-01 3.000e+00 1.240e+02 9.374e-04 1.950e-01 3.000e+00 1.240e+02
+ [8] 9.192e-04 2.750e-01 3.000e+00 7.800e+01 7.126e-04
+[1] "eta = 0.275\n    max_dp = 3\n    nrounds = 78"
+[1] "Performing 5-fold Cross Validation 10 times"
+[1] "     cv=1   fold=1   alpha=0.1"
+[1] "     cv=1   fold=1   alpha=0.2"
+[1] "     cv=1   fold=1   alpha=0.3"
+[1] "    - 8.4924 minutes"
+[1] "     cv=1   fold=2   alpha=0.1"
+[1] "     cv=1   fold=2   alpha=0.2"
+[1] "     cv=1   fold=2   alpha=0.3"
+[1] "    - 8.49845 minutes"
+[1] "     cv=1   fold=3   alpha=0.1"
+[1] "     cv=1   fold=3   alpha=0.2"
+[1] "     cv=1   fold=3   alpha=0.3"
+[1] "    - 8.61235000000001 minutes"
+[1] "     cv=1   fold=4   alpha=0.1"
+[1] "     cv=1   fold=4   alpha=0.2"
+[1] "     cv=1   fold=4   alpha=0.3"
+[1] "    - 8.67913333333333 minutes"
+[1] "     cv=1   fold=5   alpha=0.1"
+[1] "     cv=1   fold=5   alpha=0.2"
+[1] "     cv=1   fold=5   alpha=0.3"
+[1] "    - 8.7375 minutes"
+[1] "     cv=2   fold=1   alpha=0.1"
+[1] "     cv=2   fold=1   alpha=0.2"
+[1] "     cv=2   fold=1   alpha=0.3"
+[1] "    - 8.60366666666667 minutes"
+[1] "     cv=2   fold=2   alpha=0.1"
+[1] "     cv=2   fold=2   alpha=0.2"
+[1] "     cv=2   fold=2   alpha=0.3"
+[1] "    - 8.67121666666667 minutes"
+[1] "     cv=2   fold=3   alpha=0.1"
+[1] "     cv=2   fold=3   alpha=0.2"
+[1] "     cv=2   fold=3   alpha=0.3"
+[1] "    - 8.42631666666666 minutes"
+[1] "     cv=2   fold=4   alpha=0.1"
+[1] "     cv=2   fold=4   alpha=0.2"
+[1] "     cv=2   fold=4   alpha=0.3"
+[1] "    - 8.50066666666667 minutes"
+[1] "     cv=2   fold=5   alpha=0.1"
+[1] "     cv=2   fold=5   alpha=0.2"
+[1] "     cv=2   fold=5   alpha=0.3"
+[1] "    - 8.87186666666667 minutes"
+[1] "     cv=3   fold=1   alpha=0.1"
+[1] "     cv=3   fold=1   alpha=0.2"
+[1] "     cv=3   fold=1   alpha=0.3"
+[1] "    - 8.56843333333333 minutes"
+[1] "     cv=3   fold=2   alpha=0.1"
+[1] "     cv=3   fold=2   alpha=0.2"
+[1] "     cv=3   fold=2   alpha=0.3"
+[1] "    - 8.3335 minutes"
+[1] "     cv=3   fold=3   alpha=0.1"
+[1] "     cv=3   fold=3   alpha=0.2"
+[1] "     cv=3   fold=3   alpha=0.3"
+[1] "    - 8.62615000000002 minutes"
+[1] "     cv=3   fold=4   alpha=0.1"
+[1] "     cv=3   fold=4   alpha=0.2"
+[1] "     cv=3   fold=4   alpha=0.3"
+[1] "    - 8.84241666666667 minutes"
+[1] "     cv=3   fold=5   alpha=0.1"
+[1] "     cv=3   fold=5   alpha=0.2"
+[1] "     cv=3   fold=5   alpha=0.3"
+[1] "    - 8.71289999999999 minutes"
+[1] "     cv=4   fold=1   alpha=0.1"
+[1] "     cv=4   fold=1   alpha=0.2"
+[1] "     cv=4   fold=1   alpha=0.3"
+[1] "    - 8.69471666666668 minutes"
+[1] "     cv=4   fold=2   alpha=0.1"
+[1] "     cv=4   fold=2   alpha=0.2"
+[1] "     cv=4   fold=2   alpha=0.3"
+[1] "    - 8.48814999999998 minutes"
+[1] "     cv=4   fold=3   alpha=0.1"
+[1] "     cv=4   fold=3   alpha=0.2"
+[1] "     cv=4   fold=3   alpha=0.3"
+[1] "    - 8.68011666666668 minutes"
+[1] "     cv=4   fold=4   alpha=0.1"
+[1] "     cv=4   fold=4   alpha=0.2"
+[1] "     cv=4   fold=4   alpha=0.3"
+[1] "    - 8.58191666666665 minutes"
+[1] "     cv=4   fold=5   alpha=0.1"
+[1] "     cv=4   fold=5   alpha=0.2"
+[1] "     cv=4   fold=5   alpha=0.3"
+[1] "    - 8.58051666666667 minutes"
+[1] "     cv=5   fold=1   alpha=0.1"
+[1] "     cv=5   fold=1   alpha=0.2"
+[1] "     cv=5   fold=1   alpha=0.3"
+[1] "    - 8.56836666666668 minutes"
+[1] "     cv=5   fold=2   alpha=0.1"
+[1] "     cv=5   fold=2   alpha=0.2"
+[1] "     cv=5   fold=2   alpha=0.3"
+[1] "    - 8.33681666666668 minutes"
+[1] "     cv=5   fold=3   alpha=0.1"
+[1] "     cv=5   fold=3   alpha=0.2"
+[1] "     cv=5   fold=3   alpha=0.3"
+[1] "    - 8.71995 minutes"
+[1] "     cv=5   fold=4   alpha=0.1"
+[1] "     cv=5   fold=4   alpha=0.2"
+[1] "     cv=5   fold=4   alpha=0.3"
+[1] "    - 8.59160000000002 minutes"
+[1] "     cv=5   fold=5   alpha=0.1"
+[1] "     cv=5   fold=5   alpha=0.2"
+[1] "     cv=5   fold=5   alpha=0.3"
+[1] "    - 8.74123333333334 minutes"
+[1] "     cv=6   fold=1   alpha=0.1"
+[1] "     cv=6   fold=1   alpha=0.2"
+[1] "     cv=6   fold=1   alpha=0.3"
+[1] "    - 8.47886666666667 minutes"
+[1] "     cv=6   fold=2   alpha=0.1"
+[1] "     cv=6   fold=2   alpha=0.2"
+[1] "     cv=6   fold=2   alpha=0.3"
+[1] "    - 8.7337833333333 minutes"
+[1] "     cv=6   fold=3   alpha=0.1"
+[1] "     cv=6   fold=3   alpha=0.2"
+[1] "     cv=6   fold=3   alpha=0.3"
+[1] "    - 8.56476666666664 minutes"
+[1] "     cv=6   fold=4   alpha=0.1"
+[1] "     cv=6   fold=4   alpha=0.2"
+[1] "     cv=6   fold=4   alpha=0.3"
+[1] "    - 8.69385000000002 minutes"
+[1] "     cv=6   fold=5   alpha=0.1"
+[1] "     cv=6   fold=5   alpha=0.2"
+[1] "     cv=6   fold=5   alpha=0.3"
+[1] "    - 8.70943333333332 minutes"
+[1] "     cv=7   fold=1   alpha=0.1"
+[1] "     cv=7   fold=1   alpha=0.2"
+[1] "     cv=7   fold=1   alpha=0.3"
+[1] "    - 8.77280000000004 minutes"
+[1] "     cv=7   fold=2   alpha=0.1"
+[1] "     cv=7   fold=2   alpha=0.2"
+[1] "     cv=7   fold=2   alpha=0.3"
+[1] "    - 8.63088333333332 minutes"
+[1] "     cv=7   fold=3   alpha=0.1"
+[1] "     cv=7   fold=3   alpha=0.2"
+[1] "     cv=7   fold=3   alpha=0.3"
+[1] "    - 8.39451666666664 minutes"
+[1] "     cv=7   fold=4   alpha=0.1"
+[1] "     cv=7   fold=4   alpha=0.2"
+[1] "     cv=7   fold=4   alpha=0.3"
+[1] "    - 8.69545000000004 minutes"
+[1] "     cv=7   fold=5   alpha=0.1"
+[1] "     cv=7   fold=5   alpha=0.2"
+[1] "     cv=7   fold=5   alpha=0.3"
+[1] "    - 8.65540000000001 minutes"
+[1] "     cv=8   fold=1   alpha=0.1"
+[1] "     cv=8   fold=1   alpha=0.2"
+[1] "     cv=8   fold=1   alpha=0.3"
+[1] "    - 8.59991666666665 minutes"
+[1] "     cv=8   fold=2   alpha=0.1"
+[1] "     cv=8   fold=2   alpha=0.2"
+[1] "     cv=8   fold=2   alpha=0.3"
+[1] "    - 8.3506 minutes"
+[1] "     cv=8   fold=3   alpha=0.1"
+[1] "     cv=8   fold=3   alpha=0.2"
+[1] "     cv=8   fold=3   alpha=0.3"
+[1] "    - 8.59343333333333 minutes"
+[1] "     cv=8   fold=4   alpha=0.1"
+[1] "     cv=8   fold=4   alpha=0.2"
+[1] "     cv=8   fold=4   alpha=0.3"
+[1] "    - 8.72544999999997 minutes"
+[1] "     cv=8   fold=5   alpha=0.1"
+[1] "     cv=8   fold=5   alpha=0.2"
+[1] "     cv=8   fold=5   alpha=0.3"
+[1] "    - 8.74110000000001 minutes"
+[1] "     cv=9   fold=1   alpha=0.1"
+[1] "     cv=9   fold=1   alpha=0.2"
+[1] "     cv=9   fold=1   alpha=0.3"
+[1] "    - 8.78086666666665 minutes"
+[1] "     cv=9   fold=2   alpha=0.1"
+[1] "     cv=9   fold=2   alpha=0.2"
+[1] "     cv=9   fold=2   alpha=0.3"
+[1] "    - 8.68936666666668 minutes"
+[1] "     cv=9   fold=3   alpha=0.1"
+[1] "     cv=9   fold=3   alpha=0.2"
+[1] "     cv=9   fold=3   alpha=0.3"
+[1] "    - 8.31804999999998 minutes"
+[1] "     cv=9   fold=4   alpha=0.1"
+[1] "     cv=9   fold=4   alpha=0.2"
+[1] "     cv=9   fold=4   alpha=0.3"
+[1] "    - 8.4968666666667 minutes"
+[1] "     cv=9   fold=5   alpha=0.1"
+[1] "     cv=9   fold=5   alpha=0.2"
+[1] "     cv=9   fold=5   alpha=0.3"
+[1] "    - 8.63633333333328 minutes"
+[1] "     cv=10   fold=1   alpha=0.1"
+[1] "     cv=10   fold=1   alpha=0.2"
+[1] "     cv=10   fold=1   alpha=0.3"
+[1] "    - 8.68758333333335 minutes"
+[1] "     cv=10   fold=2   alpha=0.1"
+[1] "     cv=10   fold=2   alpha=0.2"
+[1] "     cv=10   fold=2   alpha=0.3"
+[1] "    - 8.73093333333333 minutes"
+[1] "     cv=10   fold=3   alpha=0.1"
+[1] "     cv=10   fold=3   alpha=0.2"
+[1] "     cv=10   fold=3   alpha=0.3"
+[1] "    - 8.17496666666666 minutes"
+[1] "     cv=10   fold=4   alpha=0.1"
+[1] "     cv=10   fold=4   alpha=0.2"
+[1] "     cv=10   fold=4   alpha=0.3"
+[1] "    - 8.58056666666665 minutes"
+[1] "     cv=10   fold=5   alpha=0.1"
+[1] "     cv=10   fold=5   alpha=0.2"
+[1] "     cv=10   fold=5   alpha=0.3"
+[1] "    - 8.68525000000003 minutes"
+[1] "Fitting took 8.68530000000004 minutes"
+[1] "Beginning Model Scoring"
+[1] "Scoring Complete"
